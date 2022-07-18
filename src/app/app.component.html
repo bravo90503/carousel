@@ -1,0 +1,56 @@
+
+<h1>DIRECTV Stream</h1>
+<div class="container-fluid">
+
+  <!-- <div class="carousel">WHAT'S ON NOW V.1</div>
+  <p-carousel [value]="recommendations.resources" [numVisible]="6" [circular]="true">
+    <ng-template let-resource pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <img src="{{resource.images[0].imageUrl}}"/>
+          <div class="title">
+            {{resource.displayTitle}}
+          </div>
+          <div class="schedule">
+            {{getLocalTime(resource.consumables[0].startTime)}} - {{getLocalTime(resource.consumables[0].endTime)}} 
+          </div>
+          <div>
+            {{resource.consumables[0].channel.name}}
+          </div>
+          <div class="correlation-id">
+            {{resource.correlationId}}
+<br/>
+            Score: {{resource.score}}
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel> -->
+
+  <div class="carousel">GENERIC</div>
+  <p-carousel [value]="generics.resources" [numVisible]="6" [circular]="true">
+    <ng-template let-resource pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <img *ngIf="resource.images" src="{{resource.images[0].imageUrl}}"/>
+          <div class="title">
+            {{resource.displayTitle}}
+          </div>
+          <!-- <div class="schedule">
+            {{getLocalTime(resource.consumables[0].startTime)}} - {{getLocalTime(resource.consumables[0].endTime)}} 
+          </div>
+          <div>
+            {{resource.consumables[0].channel.name}}
+          </div> -->
+          <div class="correlation-id">
+            <!--{{resource.correlationId}}-->
+<br/>
+            Score: {{resource.score}}
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+
+
+</div>
